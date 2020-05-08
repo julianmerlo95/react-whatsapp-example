@@ -1,1 +1,55 @@
+@import '../../../globalStyle'
 
+@media screen and ( max-width:425px )
+
+.status__container__personal
+  display: flex
+
+  &__img
+    width: $imgContactWidth
+    border-radius: $imgContactBorder
+    height: $imgContactHeight
+    margin: 2%
+    padding: 1px
+
+  &__data
+    margin: 4% 0% 0% 2%
+
+    & h3
+      margin: 0
+
+    & h4
+      margin: 0
+      font-family: $fontStyle
+      font-weight: bold
+
+.status__update__status
+  background: #ebebeb
+  font-weight: bold
+  padding: 4px
+  color: #747474
+  margin: 0
+
+.status__container__user
+  display: flex
+
+  &__img
+    width: $imgContactWidth
+    border-radius: $imgContactBorder
+    height: $imgContactHeight
+    margin: 2%
+    padding: 1px
+    border: 3px solid green
+
+  &__data
+    margin: 4% 0% 0% 2%
+    width: 100%
+    border-bottom: 1px solid #e6e6e6
+
+    & h3
+      margin: 0
+
+    & h4
+      margin: 0
+      font-family: $fontStyle
+      font-weight: bold

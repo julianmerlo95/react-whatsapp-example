@@ -1,12 +1,13 @@
 import React from 'react';
-import './Camera.sass';
 import Navbar from '../../navbar/Navbar';
+import img from '../../../assets/camera/fondo.jpeg';
+import './Camera.sass';
 
 function Camera() {
   return (
     <div className="camera">
       <Navbar />
-      <h2>CAMERA</h2>
+      <img className="camera__img" src={img}></img>
     </div>
   );
 }

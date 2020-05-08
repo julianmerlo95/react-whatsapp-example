@@ -14,7 +14,7 @@ function Layout() {
             <Route extact path="/chats" component={Chats} />
             <Route extact path="/camera" component={Camera} />
             <Route extact path="/status" component={Status} />
-            <Route extact path="/calls" component={Calls} />
+            <Route extact path="/" component={Calls} />
           </Switch>
         </BrowserRouter>
       </Suspense>

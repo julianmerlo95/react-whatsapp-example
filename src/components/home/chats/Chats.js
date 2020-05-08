@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../../navbar/Navbar';
-import arrayMessage from './data';
+import arrayUser from '../../../BDusers/index';
+import Svg from '../UI/Svg';
 import Chat from './chat/Chat';
 import './Chats.sass';
 
@@ -26,30 +27,28 @@ function Chats() {
     switchComponent = (
       <div>
         <Navbar />
-        {arrayMessage.map((chat, index) => {
+        {arrayUser.map((user, index) => {
           return (
             <div className="chats_container" key={index}>
               <div className="chats_container_img">
-                <img id="imagen" src={chat.img}></img>
+                <img id="imagen" src={user.img}></img>
               </div>
-              <div onClick={() => changeComponentHandler(chat)} className="chats_container__message">
+              <div onClick={() => changeComponentHandler(user)} className="chats_container__message">
                 <div className="chats_container__message__nameAndDate">
                   <h3>
-                    {chat.name}
+                    {user.name}
                   </h3>
                   <h3 style={{ color: 'gray', fontSize: '14px' }}
-                    className={`chats_container__message__nameAndDate__sound${chat.valueIcon ? "__true" : ""}`}>
-                    {chat.date}
+                    className={`chats_container__message__nameAndDate__sound${user.valueIcon ? "__true" : ""}`}>
+                    {user.date}
                   </h3>
                 </div>
                 <div className="chats_container__message__iconAndMessage">
                   <h3 style={{ color: 'gray', fontSize: '16px' }} >
-                    {chat.message}
+                    {user.message}
                   </h3>
-                  <svg className={`chats_container__message__iconAndMessage__icon${chat.valueIcon ? "__true" : ""}`}
-                    xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -5 24 24" width="23">
-                    <path d="M0 0h24v24H0V0z" fill="none" /><path d={chat.icon} />
-                  </svg>
+                  <Svg classIcon={`chats_container__message__iconAndMessage__icon${user.valueIcon ? "__true" : ""}`}
+                    icon={user.icon} color="gray" />
                 </div>
               </div>
             </div>

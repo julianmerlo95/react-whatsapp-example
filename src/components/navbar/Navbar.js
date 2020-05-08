@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { search, point, camera } from './data';
+import Svg from '../home/UI/Svg';
 import './Navbar.sass';
 
 function Navbar() {
@@ -9,23 +10,23 @@ function Navbar() {
       <div className="navbar__high">
         <h1 className="navbar__high__title">WhatsApp</h1>
         <ul className="navbar__high__list">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -5 24 24" width="23">
-            <path d="M0 0h24v24H0V0z" fill="none" /><path d={search} /></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -5 24 24" width="23">
-            <path d="M0 0h24v24H0V0z" fill="none" /><path d={point} /></svg>
+          <Svg icon={search} />
+          <Svg icon={point} />
         </ul>
       </div>
       <div className="navbar__down">
         <h3 className="navbar__down__camera">
-          <NavLink activeStyle={{ color: 'white' }}
-            to="/camera"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -5 24 24" width="23">
-              <path d="M0 0h24v24H0V0z" fill="none" /><path d={camera} /></svg>
+          <NavLink activeStyle={{ color: 'white' }} to="/camera">
+            <Svg icon={camera} />
           </NavLink>
         </h3>
         <ul className="navbar__down__list">
-          <li><NavLink activeStyle={{ color: 'white' }} to="/chats">Chats</NavLink></li>
-          <li><NavLink activeStyle={{ color: 'white' }} to="/status">Status</NavLink></li>
-          <li><NavLink activeStyle={{ color: 'white' }} to="/calls">Calls</NavLink></li>
+          <li><NavLink activeStyle={{ color: 'white' }}
+            to="/chats">Chats</NavLink></li>
+          <li><NavLink activeStyle={{ color: 'white' }}
+            to="/status">Status</NavLink></li>
+          <li><NavLink activeStyle={{ color: 'white' }}
+            to="/calls">Calls</NavLink></li>
         </ul>
       </div>
     </div>
