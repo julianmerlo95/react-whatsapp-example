@@ -5,8 +5,6 @@ import './Chat.sass';
 
 const Chat = (props) => {
   const { img, name, history } = props;
-  console.log(history);
-
 
   return (
     <div className="chat">
