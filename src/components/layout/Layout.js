@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navbar from '../navbar/Navbar';
-import Calls from '../home/calls/Calls';
-import Camera from '../home/camera/Camera';
-import Chats from '../home/chats/Chats';
-import Status from '../home/status/Status';
+const Calls = React.lazy(() => import('../home/calls/Calls'));
+const Camera = React.lazy(() => import('../home/camera/Camera'));
+const Status = React.lazy(() => import('../home/status/Status'));
+const Chats = React.lazy(() => import('../home/chats/Chats'));
 
 function Layout() {
   return (
     <div className="layout">
-      <BrowserRouter>
-        <Navbar />
-        <Switch>
-          <Route extact path="/camera" component={Camera} />
-          <Route extact path="/chats" component={Chats} />
-          <Route extact path="/status" component={Status} />
-          <Route extact path="/calls" component={Calls} />
-        </Switch>
-      </BrowserRouter>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <BrowserRouter>
+          <Switch>
+            <Route extact path="/chats" component={Chats} />
+            <Route extact path="/camera" component={Camera} />
+            <Route extact path="/status" component={Status} />
+            <Route extact path="/calls" component={Calls} />
+          </Switch>
+        </BrowserRouter>
+      </Suspense>
     </div>
   );
 }

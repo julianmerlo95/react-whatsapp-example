@@ -16,13 +16,16 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar__down">
-        <h3 className="navbar__down__camera"><NavLink activeStyle={{ borderBottom: '5px solid white' }}
-          to="/camera"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -5 24 24" width="23">
-            <path d="M0 0h24v24H0V0z" fill="none" /><path d={camera} /></svg></NavLink></h3>
+        <h3 className="navbar__down__camera">
+          <NavLink activeStyle={{ color: 'white' }}
+            to="/camera"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -5 24 24" width="23">
+              <path d="M0 0h24v24H0V0z" fill="none" /><path d={camera} /></svg>
+          </NavLink>
+        </h3>
         <ul className="navbar__down__list">
-          <li><NavLink activeStyle={{ borderBottom: '5px solid white' }} to="/chats">Chats</NavLink></li>
-          <li><NavLink activeStyle={{ borderBottom: '5px solid white' }} to="/status">Status</NavLink></li>
-          <li><NavLink activeStyle={{ borderBottom: '5px solid white' }} to="/calls">Calls</NavLink></li>
+          <li><NavLink activeStyle={{ color: 'white' }} to="/chats">Chats</NavLink></li>
+          <li><NavLink activeStyle={{ color: 'white' }} to="/status">Status</NavLink></li>
+          <li><NavLink activeStyle={{ color: 'white' }} to="/calls">Calls</NavLink></li>
         </ul>
       </div>
     </div>

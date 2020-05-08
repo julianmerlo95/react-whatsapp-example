@@ -1,0 +1,53 @@
+@import '../../../../globalStyle'
+
+.chat
+  width: 100%
+  background-image: url('../../../../assets/chats/fondoChat.jpg')
+
+  &_container_date
+    height: 70px
+    width: 100%
+    display: flex
+    background: #2c4b33
+    position: fixed
+
+    & a
+      margin-top: 20px
+
+    &__img
+      width: $imgContactWidth
+      border-radius: $imgContactBorder
+      height: $imgContactHeight
+      margin: 2%
+
+    &__name
+      color: white
+      margin: 25px 0px 0px 5px
+
+  &__messageOne
+    text-align: left
+    background: white
+    width: 80%
+    border-radius: 6px
+    padding: 5px
+    margin: 0
+    margin-left: 5%
+    font-family: $fontStyle
+    font-weight: bold
+
+  &__messageTwo
+    text-align: right
+
+.chat__container__messageTwo
+  width: 100%
+  display: flex
+  justify-content: flex-end
+
+  &_message
+    background: #8ecf81
+    width: 80%
+    margin: 5%
+    border-radius: 6px
+    padding: 5px
+    font-family: $fontStyle
+    font-weight: bold
