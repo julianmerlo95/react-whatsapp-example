@@ -3,10 +3,16 @@
 .chat
   width: 100%
   background-image: url('../../../../assets/chats/fondoChat.jpg')
+  width: 80%
+  margin: 0 auto
+  margin-top: 20px
+  border-radius: 5px
+  box-shadow: $box-shadow
 
   &_container_date
     height: 70px
-    width: 100%
+    width: 80%
+    margin: 0 auto
     display: flex
     background: $navbar-color
     position: fixed
@@ -18,7 +24,7 @@
       width: $imgContactWidth
       border-radius: $imgContactBorder
       height: $imgContactHeight
-      margin: 2%
+      margin: 0.5%
 
     &__name
       color: white
@@ -51,3 +57,17 @@
     padding: 5px
     font-family: $fontStyle
     font-weight: bold
+
+@media screen and ( max-width:788px  )
+  .chat
+    width: 100%
+    margin: 0 auto
+    margin-top: 0px
+
+    &_container_date
+      height: 70px
+      width: 100%
+      margin: 0 auto
+
+      &__img
+        margin-top: 5px

@@ -1,12 +1,14 @@
 @import '../../../globalStyle.sass'
 
-@media screen and ( max-width:425px  )
-
 .chats_container
   display: flex
+  width: 80%
+  margin: 0 auto
+  background: rgb(252, 252, 252)
 
   &_img
-    width: 20%
+    width: 7%
+    margin-top: 6px
 
     & img
       width: 60px
@@ -15,7 +17,7 @@
       margin: 12%
 
   &__message
-    width: 80%
+    width: 45%
     border-bottom: 1px solid #e6e6e6
 
     &__nameAndDate
@@ -27,9 +29,9 @@
         margin: 0
         margin-top: 4.5%
 
-      &__sound__true
-        color: #33b11a!important
-        border-radius: 100%
+      & h4
+        margin: 0
+        margin: 15px 7px 0px 0px
 
     &__iconAndMessage
       width: 100%
@@ -40,15 +42,38 @@
 
       & h3
         margin: 0
-        margin-top: 1%
         color: $text-color-secondary!important
 
-      &__icon__true
-        background: #33b11a
-        border-radius: 100%
+      & span
+        margin-right: 7px
+
+@media screen and ( max-width:768px  )
+  .chats_container
+    display: flex
+    width: 100%!important
+    margin: 0 auto
+
+    &_img
+      width: 20%!important
+      margin-top: 0px
+
+    &__message
+      width: 80%
+
+@media screen and ( max-width:425px  )
+  .chats_container
+    display: flex
+    width: 100%!important
+    margin: 0 auto
+
+    &_img
+      width: 20%!important
+      margin-top: 0px
+
+    &__message
+      width: 80%
 
 @media screen and ( max-width:320px  )
-
   .chats_container_img
     width: 20%
 

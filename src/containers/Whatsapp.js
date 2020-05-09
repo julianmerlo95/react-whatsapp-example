@@ -3,9 +3,9 @@ import Layout from '../components/layout/Layout';
 
 function Whatsapp() {
   return (
-    <div className="whatsapp">
+    <>
       <Layout />
-    </div>
+    </>
   );
 }
 

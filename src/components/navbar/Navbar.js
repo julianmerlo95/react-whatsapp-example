@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { search, point, camera } from './data';
-import Svg from '../home/UI/Svg';
+import Svg from '../UI/Svg';
 import './Navbar.sass';
 
 function Navbar() {
@@ -16,17 +16,18 @@ function Navbar() {
       </div>
       <div className="navbar__down">
         <h3 className="navbar__down__camera">
-          <NavLink activeStyle={{ color: 'white' }} to="/camera">
-            <Svg icon={camera} />
-          </NavLink>
+          <NavLink activeStyle={{ color: 'white' }} to="/camera"> <Svg icon={camera} /> </NavLink>
         </h3>
         <ul className="navbar__down__list">
-          <li><NavLink activeStyle={{ color: 'white' }}
-            to="/chats">Chats</NavLink></li>
-          <li><NavLink activeStyle={{ color: 'white' }}
-            to="/status">Status</NavLink></li>
-          <li><NavLink activeStyle={{ color: 'white' }}
-            to="/calls">Calls</NavLink></li>
+          <li>
+            <NavLink activeStyle={{ color: 'white' }} to="/"> Chats </NavLink>
+          </li>
+          <li>
+            <NavLink activeStyle={{ color: 'white' }} to="/status"> Status </NavLink>
+          </li>
+          <li>
+            <NavLink activeStyle={{ color: 'white' }} to="/calls"> Calls </NavLink>
+          </li>
         </ul>
       </div>
     </div>

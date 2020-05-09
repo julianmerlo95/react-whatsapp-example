@@ -1,6 +1,9 @@
 @import '../../../globalStyle'
 
-@media screen and ( max-width:425px )
+.status
+  width: 80%
+  margin: 0 auto
+  background: rgb(252, 252, 252)
 
 .status__container__personal
   display: flex
@@ -38,6 +41,7 @@
     border-radius: $imgContactBorder
     height: $imgContactHeight
     margin: 2%
+    margin-top: 50px
     padding: 1px
     border: 3px solid green
 
@@ -53,3 +57,21 @@
       margin: 0
       font-family: $fontStyle
       font-weight: bold
+
+@media screen and ( max-width:768px )
+  .status
+    width: 100%
+    margin: 0 auto
+    background: rgb(252, 252, 252)
+
+  .status__container__user
+    display: flex
+
+    &__img
+      margin-top: 5px
+
+@media screen and ( max-width:425px )
+  .status
+    width: 100%
+    margin: 0 auto
+    background: rgb(252, 252, 252)

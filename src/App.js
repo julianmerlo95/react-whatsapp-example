@@ -3,7 +3,7 @@ import Whatsapp from './containers/Whatsapp';
 
 function App() {
   return (
-    < >
+    <>
       <Whatsapp />
     </>
   );

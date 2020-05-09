@@ -1,27 +1,29 @@
 @import '../../globalStyle'
 
-@media screen and ( max-width:425px  )
+.navbar
+  background-color: $navbar-color
+  height: 140px
+  width: 80%
+  margin: 0 auto
+  margin-top: 20px
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  box-shadow: $box-shadow
 
-  .path
-    color: red
-  .navbar
-    background-color: $navbar-color
-    height: 110px
+  .navbar__high
+    display: flex
+    justify-content: space-between
 
-    &__high
+    &__title
+      font-size: 20px
+      color: white
+      font-weight: bold
+      margin: 1%
+
+    &__list
       display: flex
-      justify-content: space-between
-
-      &__title
-        font-size: 20px
-        color: white
-        margin: 3.5%
-        font-weight: bold
-
-      &__list
-        display: flex
-        list-style: none
-        margin: 3%
+      list-style: none
+      margin: 1%
 
   .navbar__down
     display: flex
@@ -29,8 +31,8 @@
     &__list
       display: flex
       justify-content: space-between
-      width: 75%
-      margin-top: 6.6%
+      width: 92%
+      margin-top: 1.3%
       list-style: none
 
     &__list a
@@ -41,5 +43,59 @@
       font-weight: bold
 
     &__camera
+      margin-left: 2%
+      display: none
+
+@media screen and ( max-width:768px  )
+
+  .navbar
+    background-color: $navbar-color
+    height: 140px
+    width: 100%
+    margin: 0 auto
+    margin-top: 0
+
+  .navbar__high__title
+    margin: 3%
+
+  .navbar__down
+    display: flex
+
+    &__list
+      margin-top: 4%!important
+      width: 75%!important
+    &__list a
+      margin-top: 50px
+
+    &__camera
+      margin: 0
+      width: 5%
+      margin: 3.5% 0% 0% 2%
+      display: inline!important
+
+@media screen and ( max-width:425px )
+  .navbar
+    background-color: $navbar-color
+    height: 110px
+
+    &__title
+      font-size: 20px
+      color: white
+      margin: 3.5%
+      font-weight: bold
+
+    &__list
+      display: flex
+      list-style: none
+      margin: 3%
+
+  .navbar__down
+    display: flex
+
+    &__list
+      margin-top: 6.6%!important
+
+    &__camera
+      margin: 0
       margin-top: 5%
       margin-left: 2%

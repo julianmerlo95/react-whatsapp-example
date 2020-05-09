@@ -1,32 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
 import arrayUser from '../../../BDusers/index';
-import Statu from './statu/Statu';
 import img from '../../../assets/status/julian.JPG'
 import './Status.sass';
 
-function Status() {
+function Status(props) {
 
-  const [renderComponent, setRenderComponent] = useState(true);
-  const [statusImg, setStatusImg] = useState("");
-  const [statusImgStatu, setStatusImgStatu] = useState("");
-  const [statusName, setStatusName] = useState("");
-  const [statusDate, setStatusDate] = useState("");
-
-  const changeComponentHandler = (user) => {
-    setStatusImg(user.img);
-    setStatusImgStatu(user.imgStatu);
-    setStatusName(user.name);
-    setStatusDate(user.date);
-    setRenderComponent(!renderComponent);
+  const changeComponentHandler = (index) => {
+    props.history.push(`/status/${index}`)
   }
 
-  let switchComponent = null;
-
-  if (renderComponent) {
-    switchComponent = (
-      <div>
-        <Navbar />
+  return (
+    <div>
+      <Navbar />
+      <div className="status">
         <div className="status__container__personal">
           <img className="status__container__personal__img" src={img}></img>
           <div className="status__container__personal__data">
@@ -39,7 +27,7 @@ function Status() {
           return (
             <div key={index} className="status__container__user">
               <img className="status__container__user__img" src={user.imgStatu}></img>
-              <div onClick={() => changeComponentHandler(user)} className="status__container__user__data">
+              <div onClick={() => changeComponentHandler(index)} className="status__container__user__data">
                 <h3>{user.name}</h3>
                 <h4>{user.date}</h4>
               </div>
@@ -47,24 +35,8 @@ function Status() {
           )
         })}
       </div>
-    )
-  } else {
-    switchComponent = (
-      <Statu
-        img={statusImg}
-        imgStatu={statusImgStatu}
-        name={statusName}
-        date={statusDate}
-      />
-    )
-  }
-
-
-  return (
-    <div className="status">
-      {switchComponent}
     </div>
   );
 }
 
-export default Status;
+export default withRouter(Status);

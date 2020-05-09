@@ -1,31 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
+import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
+import Loading from '../../loading/Loading';
 import arrayUser from '../../../BDusers/index';
-import Svg from '../UI/Svg';
-import Chat from './chat/Chat';
+import Svg from '../../UI/Svg';
 import './Chats.sass';
 
-function Chats() {
-
-  const [renderComponent, setRenderComponent] = useState(true);
-  const [contactImg, setContactImg] = useState("");
-  const [contactName, setContactName] = useState("");
+function Chats(props) {
 
   //Para agrandar la imagen
   // const changeImgHandler = (index) => {
   // }
 
-  const changeComponentHandler = (chat) => {
-    setContactImg(chat.img)
-    setContactName(chat.name)
-    setRenderComponent(!renderComponent);
+  const changeComponentHandler = (index) => {
+    props.history.push(`./chats/${index}`);
   }
 
-  let switchComponent = null;
-
-  if (renderComponent) {
-    switchComponent = (
-      <div>
+  return (
+    <>
+      <Suspense fallback={<Loading />}>
         <Navbar />
         {arrayUser.map((user, index) => {
           return (
@@ -33,45 +26,33 @@ function Chats() {
               <div className="chats_container_img">
                 <img id="imagen" src={user.img}></img>
               </div>
-              <div onClick={() => changeComponentHandler(user)} className="chats_container__message">
+              <div onClick={() => changeComponentHandler(index)}
+                className="chats_container__message">
                 <div className="chats_container__message__nameAndDate">
                   <h3>
                     {user.name}
                   </h3>
-                  <h3 style={{ color: 'gray', fontSize: '14px' }}
-                    className={`chats_container__message__nameAndDate__sound${user.valueIcon ? "__true" : ""}`}>
+                  <h4 style={{ color: 'gray', fontSize: '14px' }}
+                    className={`chats_container__message__nameAndDate__sound`}>
                     {user.date}
-                  </h3>
+                  </h4>
                 </div>
                 <div className="chats_container__message__iconAndMessage">
                   <h3 style={{ color: 'gray', fontSize: '16px' }} >
                     {user.message}
                   </h3>
-                  <Svg classIcon={`chats_container__message__iconAndMessage__icon${user.valueIcon ? "__true" : ""}`}
-                    icon={user.icon} color="gray" />
+                  <span>
+                    <Svg classIcon={`chats_container__message__iconAndMessage__icon`}
+                      icon={user.iconChats} color="gray" />
+                  </span>
                 </div>
               </div>
             </div>
           )
         })}
-      </div>
-    )
-  } else {
-    switchComponent = (
-      <div>
-        <Chat
-          img={contactImg}
-          name={contactName}
-        />
-      </div>
-    )
-  }
-
-  return (
-    <div className="chats">
-      {switchComponent}
-    </div >
+      </Suspense>
+    </>
   );
 }
 
-export default Chats;
+export default withRouter(Chats);

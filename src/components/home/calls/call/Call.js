@@ -1,17 +1,20 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Svg from '../../UI/Svg';
+import Svg from '../../../UI/Svg';
+import arrayUser from '../../../../BDusers/index';
 import './Call.sass';
 
 const Call = (props) => {
 
-  const { history, img, name, iconPhone } = props;
+  const { history, match } = props;
+
+  let index = match.params.index;
 
   return (
     <div className="call">
       <div className="call__navbar">
         <div className="call__navbar__info">
-          <span onClick={() => history.goBack()}>
+          <span onClick={() => history.push('/calls')}>
             <Svg icon="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z" />
           </span>
           <h3>Call info</h3>
@@ -24,13 +27,13 @@ const Call = (props) => {
         </div>
       </div>
       <div className="call__date">
-        <img src={img}></img>
+        <img src={arrayUser[index].img}></img>
         <div className="call__date__user">
-          <h3>{name}</h3>
-          <h4>{name}</h4>
+          <h3>{arrayUser[index].name}</h3>
+          <h4>{arrayUser[index].name}</h4>
         </div>
         <div>
-          <Svg icon={iconPhone} />
+          <Svg icon={arrayUser[index].iconPhone} />
         </div>
       </div>
     </div>
