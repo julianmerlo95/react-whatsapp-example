@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
 import arrayUser from '../../../BDusers/index';
 import img from '../../../assets/status/julian.JPG'
+import Column from '../../UI/Column';
 import './Status.sass';
 
 function Status(props) {
@@ -21,6 +22,9 @@ function Status(props) {
             <h3>My status</h3>
             <h4>Tap to add  status update</h4>
           </div>
+          <Column
+            background={'#0a534b'}
+            name={'State'} />
         </div>
         <h3 className="status__update__status">Recent update</h3>
         {arrayUser.map((user, index) => {
@@ -31,6 +35,9 @@ function Status(props) {
                 <h3>{user.name}</h3>
                 <h4>{user.date}</h4>
               </div>
+              <Column
+                background={user.colorBackground}
+                name={user.name} />
             </div>
           )
         })}

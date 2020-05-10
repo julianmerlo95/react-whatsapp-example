@@ -2,10 +2,15 @@
 
 .calls__container__user
   display: flex
-  border-bottom: 1px solid #e6e6e6
+  // border-bottom: 1px solid #e6e6e6
+  background: white
+  width: 80%
+  margin: 0 auto
 
 .calls__img
   width: 20%
+  margin-top: 25px
+  margin: 0
 
   &__user
     width: $imgContactWidth
@@ -15,7 +20,7 @@
 
 .calls__date
   width: 70%
-  margin: 4%
+  margin: 3% 0% 0% 4%
 
   & h3
     margin: 0
@@ -25,7 +30,15 @@
     margin: 4px 0px 0px 4px
     font-family: $fontStyle
     font-weight: bold
+    color: #5e5e5e !important
 
 .calls__icon
   width: 10%
-  margin-top: 6%
+  margin-top: 3%
+
+@media screen and ( max-width:768px )
+  .calls__container__user
+    width: 100%
+
+  .calls__img
+    width: 20%

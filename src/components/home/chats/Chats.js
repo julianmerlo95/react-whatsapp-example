@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
 import Loading from '../../loading/Loading';
 import arrayUser from '../../../BDusers/index';
+import Column from '../../UI/Column';
 import Svg from '../../UI/Svg';
 import './Chats.sass';
 
@@ -47,6 +48,8 @@ function Chats(props) {
                   </span>
                 </div>
               </div>
+              <Column background={user.colorBackground}
+                name={user.name} />
             </div>
           )
         })}

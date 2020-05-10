@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
 import arrayUsers from '../../../BDusers/index';
+import Column from '../../UI/Column';
 import Svg from '../../UI/Svg';
 import './Calls.sass';
 
@@ -30,6 +31,9 @@ function Calls(props) {
             <div className="calls__icon">
               <Svg icon={user.iconCalls} color="black" width="25" />
             </div>
+            <Column
+              background={user.colorBackground}
+              name={user.name} />
           </div>
         )
       })}

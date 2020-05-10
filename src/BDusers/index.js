@@ -26,6 +26,7 @@ const arrayUser = [
   {
     "img": imgUser1,
     "imgStatu": imgStatus1,
+    "colorBackground": "#0a534b",
     "name": "Julian Merlo",
     "date": "09:35 AM",
     "message": "Hoy envio los datos",
@@ -64,6 +65,7 @@ const arrayUser = [
   {
     "img": imgUser7,
     "imgStatu": imgUser7,
+    "colorBackground": "#075E54",
     "name": "Julian Perez",
     "date": "12:35 PM",
     "message": "LLevo un par de birras mas",
@@ -102,6 +104,7 @@ const arrayUser = [
   {
     "img": imgUser13,
     "imgStatu": imgUser13,
+    "colorBackground": "#0a534b",
     "name": "Agustin",
     "date": "15:35 PM",
     "message": "Mepa que nos quedamos corto de fernet",
@@ -140,6 +143,7 @@ const arrayUser = [
   {
     "img": imgUser4,
     "imgStatu": imgUserStatus4,
+    "colorBackground": "#075E54",
     "name": "El equipo fernetero",
     "date": "15:15 PM",
     "message": "Compre 4 fernet, somos 3, esta bien?",
@@ -178,6 +182,7 @@ const arrayUser = [
   {
     "img": imgUser10,
     "imgStatu": imgUserStatus5,
+    "colorBackground": "#0a534b",
     "name": "Laburo",
     "date": "02:35 AM",
     "message": "Me acorde de un bug ...",
@@ -216,6 +221,7 @@ const arrayUser = [
   {
     "img": imgUser14,
     "imgStatu": imgUserStatus10,
+    "colorBackground": "#075E54",
     "name": "Mama",
     "date": "16:35 PM",
     "message": "Compraste lo que te pedi????",
@@ -254,6 +260,7 @@ const arrayUser = [
   {
     "img": imgUser11,
     "imgStatu": imgUser11,
+    "colorBackground": "#0a534b",
     "name": "Asado de lunes, y quiza jueves",
     "date": "12:35 PM",
     "message": "Vamoos que comemos!!!",
@@ -292,6 +299,7 @@ const arrayUser = [
   {
     "img": imgUser2,
     "imgStatu": imgUserStatus8,
+    "colorBackground": "#075E54",
     "name": "Juan Gomez",
     "date": "12:01 PM",
     "message": "typing ...",
@@ -330,6 +338,7 @@ const arrayUser = [
   {
     "img": imgUser3,
     "imgStatu": imgUserStatus15,
+    "colorBackground": "#0a534b",
     "name": "Jose Nestor",
     "date": "16:38 PM",
     "message": "jajaja me habia olvidado",
@@ -368,6 +377,7 @@ const arrayUser = [
   {
     "img": imgUser12,
     "imgStatu": imgUser12,
+    "colorBackground": "#075E54",
     "name": "Matias Perez",
     "date": "17:25 PM",
     "message": "4 3 3 era ayer!!",
@@ -407,6 +417,7 @@ const arrayUser = [
   {
     "img": imgUser5,
     "imgStatu": imgUser5,
+    "colorBackground": "#0a534b",
     "name": "El gallina",
     "date": "12:14 PM",
     "message": "Mañana juega la baaaaaaanda",
@@ -444,6 +455,7 @@ const arrayUser = [
   }, {
     "img": imgUser6,
     "imgStatu": imgUserStatus8,
+    "colorBackground": "#075E54",
     "name": "Papa",
     "date": "18:35 PM",
     "message": "Llevaste la comida??",
@@ -482,6 +494,7 @@ const arrayUser = [
   {
     "img": imgUser8,
     "imgStatu": imgUserStatus13,
+    "colorBackground": "#0a534b",
     "name": "Luis",
     "date": "20:25 PM",
     "message": "Caundo vienen?",
@@ -519,6 +532,7 @@ const arrayUser = [
   }, {
     "img": imgUser9,
     "imgStatu": imgUserStatus11,
+    "colorBackground": "#075E54",
     "name": "Roberto",
     "date": "10:00 AM",
     "message": "Esta todo joya",
