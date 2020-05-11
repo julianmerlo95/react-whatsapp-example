@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 import arrayUser from '../../../../BDusers/index';
-import Svg from '../../../UI/Svg';
+import Svg from '../../../UI/svg/Svg';
 import './Chat.sass';
 
 const Chat = (props) => {

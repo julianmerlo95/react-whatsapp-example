@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
 import arrayUsers from '../../../BDusers/index';
-import Column from '../../UI/Column';
-import Svg from '../../UI/Svg';
+import Column from '../../UI/column/Column';
+import Svg from '../../UI/svg/Svg';
 import './Calls.sass';
 
 function Calls(props) {

@@ -12,7 +12,8 @@ const Call = React.lazy(() => import('../home/calls/call/Call'));
 function Layout() {
   return (
     <>
-      <Suspense fallback={<Loading />}>
+      <Loading />
+      {/* <Suspense fallback={<Loading />}>
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Chats} />
@@ -24,7 +25,7 @@ function Layout() {
             <Route path="/calls/:index" component={Call} />
           </Switch>
         </BrowserRouter>
-      </Suspense>
+      </Suspense> */}
     </>
   );
 }

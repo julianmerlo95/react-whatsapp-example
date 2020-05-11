@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { search, point, camera } from './data';
-import Svg from '../UI/Svg';
+import Svg from '../UI/svg/Svg';
 import './Navbar.sass';
 
 function Navbar() {

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
 import arrayUser from '../../../BDusers/index';
 import img from '../../../assets/status/julian.JPG'
-import Column from '../../UI/Column';
+import Column from '../../UI/column/Column';
 import './Status.sass';
 
 function Status(props) {
