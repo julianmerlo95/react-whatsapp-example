@@ -12,12 +12,18 @@ function Chats(props) {
   const [showImage, setShowImage] = useState(false)
 
   const changeImgHandler = (index) => {
-    const image = document.getElementById(index)
+    const image = document.getElementById(index);
+    const showName = document.getElementById(`name_${index}`);
+    const showDiv = document.getElementById(`div_${index}`);
     setShowImage(!showImage);
     if (showImage) {
+      showDiv.classList = "showDiv";
+      showName.classList = "showName";
       image.className = 'showImage';
     } else {
-      image.className = '';
+      showDiv.className = 'hide__chats_container_img';
+      showName.className = 'hideName';
+      image.className = 'hideImage';
     }
   }
 
@@ -34,7 +40,11 @@ function Chats(props) {
             <div className="chats_container" key={index}>
               <div className="chats_container_img">
                 <img onClick={() => changeImgHandler(index)}
-                  id={index} src={user.img}></img>
+                  src={user.img}></img>
+              </div>
+              <div id={`div_${index}`} className="hide__chats_container_img">
+                <h5 id={`name_${index}`} className="hideImage"> {user.name}</h5>
+                <img id={index} className="hideImage" src={user.img}></img>
               </div>
               <div onClick={() => changeComponentHandler(index)}
                 className="chats_container__message">
