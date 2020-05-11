@@ -9,9 +9,17 @@ import './Chats.sass';
 
 function Chats(props) {
 
-  //Para agrandar la imagen
-  // const changeImgHandler = (index) => {
-  // }
+  const [showImage, setShowImage] = useState(false)
+
+  const changeImgHandler = (index) => {
+    const image = document.getElementById(index)
+    setShowImage(!showImage);
+    if (showImage) {
+      image.className = 'showImage';
+    } else {
+      image.className = '';
+    }
+  }
 
   const changeComponentHandler = (index) => {
     props.history.push(`./chats/${index}`);
@@ -25,7 +33,8 @@ function Chats(props) {
           return (
             <div className="chats_container" key={index}>
               <div className="chats_container_img">
-                <img id="imagen" src={user.img}></img>
+                <img onClick={() => changeImgHandler(index)}
+                  id={index} src={user.img}></img>
               </div>
               <div onClick={() => changeComponentHandler(index)}
                 className="chats_container__message">
