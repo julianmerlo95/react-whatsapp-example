@@ -24,12 +24,12 @@ function Calls(props) {
             <div onClick={() => changeComponentHandler(index)} className="calls__date">
               <h3>{user.name}</h3>
               <div style={{ display: 'flex' }}>
-                <Svg icon={user.iconCall} color="black" width="18" />
+                <Svg icon={user.iconCall} color="green" width="12" />
                 <h4>{user.date}</h4>
               </div>
             </div>
             <div className="calls__icon">
-              <Svg icon={user.iconCalls} color="black" width="25" />
+              <Svg icon={user.iconCalls} color="green" width="25" />
             </div>
             <Column
               background={user.colorBackground}

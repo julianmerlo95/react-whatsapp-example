@@ -1,13 +1,17 @@
 @import '../../globalStyle'
 
+.navbar__hide
+  display: none
+
+.navbar__show
+  display: inline
+
 .navbar
   background-color: $navbar-color
   height: 140px
   width: 80%
   margin: 0 auto
   margin-top: 20px
-  border-top-left-radius: 5px
-  border-top-right-radius: 5px
 
   .navbar__high
     display: flex
@@ -70,7 +74,7 @@
     &__camera
       margin: 0
       width: 5%
-      margin: 3.5% 0% 0% 2%
+      margin: 0% 0% 0% 2%
       display: inline!important
 
 @media screen and ( max-width:425px )
@@ -97,5 +101,11 @@
 
     &__camera
       margin: 0
-      margin-top: 5%
+      margin-top: 3.6%
       margin-left: 2%
+
+@media screen and ( max-width:375px )
+  .navbar__down
+    &__camera
+      margin: 0
+      margin-top: 3%
