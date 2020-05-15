@@ -51,45 +51,23 @@
 .hide__chats_container_img , .hideName ,.hideImage
   display: none!important
 
-.showDiv
-  z-index: 2!important
-  position: absolute!important
-  width: 80%!important
-  margin-left: 55px
-  height: 200px!important
+@media screen and ( max-width:1024px)
+  .chats_container
+    display: flex
+    width: 80%
 
-.showDiv__text
-  display: flex
-  position: absolute
-  justify-content: space-around
-  width: 260px
-  height: 43px
-  margin-top: 175px
-  background: #f8f7f7
-  color: black
-  margin-left: 27px
-  border-bottom-left-radius: 5px
-  border-bottom-right-radius: 5px
-  opacity: 0.9
+    &_img
+      width: 20%!important
+      margin-top: 0px
 
-.showName
-  width: 80%!important
-  color: white!important
-  text-align: left!important
-  position: absolute!important
-  margin-left: 10%!important
-  object-fit: contain
+    &__message
+      width: 80%
 
-.showImage
-  display: block!important
-  width: 260px!important
-  height: 225px!important
-  margin-left: 8%!important
-  border-radius: 0%!important
-  border-radius: 5px!important
-  transition: 0.5s
+  .chats_container__message__nameAndDate h3
+    margin: 0
+    margin-top: 5%
 
-@media screen and ( max-width:768px  )
+@media screen and ( max-width:768px)
   .chats_container
     display: flex
     width: 100%!important
@@ -106,7 +84,7 @@
     margin: 0
     margin-top: 5%
 
-@media screen and ( max-width:425px  )
+@media screen and ( max-width:425px)
   .chats_container
     display: flex
     width: 100%!important
@@ -119,7 +97,7 @@
     &__message
       width: 80%
 
-@media screen and ( max-width:320px  )
+@media screen and ( max-width:320px)
   .chats_container_img
     width: 20%
 

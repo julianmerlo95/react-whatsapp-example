@@ -6,7 +6,13 @@ export class ContextProvider extends Component {
 
   state = {
     showInput: false,
-    showPoints: false
+    showPoints: false,
+    showimage: false,
+    newRenderImage: {
+      index: "",
+      img: "",
+      name: ""
+    },
   }
 
   changeMoodHandler = () => {
@@ -16,14 +22,24 @@ export class ContextProvider extends Component {
   changePointsHandler = () => {
     this.setState({ showPoints: !this.state.showPoints })
   }
+
+  changeImageHandler = (index, img, name) => {
+    const showImageNew = { index, img, name }
+    this.setState({ newRenderImage: showImageNew })
+    this.setState({ showimage: !this.state.showimage })
+  }
+
   render() {
     return (
       <>
         <Context.Provider value={{
           showInput: this.state.showInput,
           showPoints: this.state.showPoints,
+          showimage: this.state.showimage,
+          newRenderImage: this.state.newRenderImage,
           changeMoodHandler: this.changeMoodHandler,
-          changePointsHandler: this.changePointsHandler
+          changePointsHandler: this.changePointsHandler,
+          changeImageHandler: this.changeImageHandler
         }}>
 
           {this.props.children}

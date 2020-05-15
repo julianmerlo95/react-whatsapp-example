@@ -1,0 +1,48 @@
+@import '../../../globalStyle'
+
+.image
+  width: 15%
+  z-index: 500
+  display: flex
+  position: absolute
+  justify-content: center
+  margin: 15px 0px 0px 280px
+
+  & h3
+    position: absolute
+    color: white
+
+  & img
+    width: 270px
+    height: 200px
+    border-radius: 5px
+
+  &__icon
+    display: flex
+    position: absolute
+    justify-content: space-around
+    width: 270px
+    height: 43px
+    margin-top: 150px
+    background: #f8f7f7
+    color: black
+    opacity: 0.9
+
+@media screen and ( max-width:425px  )
+  .image
+    margin: 15px 0px 0px 185px
+
+@media screen and ( max-width:375px  )
+  .image
+    margin: 15px 0px 0px 182px
+
+@media screen and ( max-width:320px  )
+  .image
+    margin: 15px 0px 0px 150px
+
+    & img
+      width: 220px
+      height: 200px
+
+    &__icon
+      width: 220px

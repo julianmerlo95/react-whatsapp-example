@@ -31,7 +31,8 @@ function Status(props) {
           return (
             <div key={index} className="status__container__user">
               <img className="status__container__user__img" src={user.imgStatu}></img>
-              <div onClick={() => changeComponentHandler(index)} className="status__container__user__data">
+              <div onClick={() => changeComponentHandler(index)}
+                className="status__container__user__data">
                 <h3>{user.name}</h3>
                 <h4>{user.date}</h4>
               </div>

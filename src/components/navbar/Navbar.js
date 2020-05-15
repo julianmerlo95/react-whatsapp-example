@@ -15,17 +15,18 @@ function Navbar() {
 
   return (
     <div className="navbar">
+
+      <div className="navbar__high">
+        <h1 className="navbar__high__title">WhatsApp</h1>
+        <ul className="navbar__high__list">
+          <span onClick={changeMoodHandler}>
+            <Svg icon={search} />
+          </span>
+          <span onClick={changePointsHandler}><Svg icon={point} /></span>
+          {/* {showPoints == false ? "" : <Points />} */}
+        </ul>
+      </div>
       {showInput == false ? <div id="navbar" className="navbar__show">
-        <div className="navbar__high">
-          <h1 className="navbar__high__title">WhatsApp</h1>
-          <ul className="navbar__high__list">
-            <span onClick={changeMoodHandler}>
-              <Svg icon={search} />
-            </span>
-            <span onClick={changePointsHandler}><Svg icon={point} /></span>
-            {/* {showPoints == false ? "" : <Points />} */}
-          </ul>
-        </div>
         <div className="navbar__down">
           <h3 className="navbar__down__camera">
             <NavLink activeStyle={{ color: 'white' }} to="/camera"> <Svg icon={camera} /> </NavLink>
