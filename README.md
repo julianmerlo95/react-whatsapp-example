@@ -10,8 +10,7 @@ Estructura de la pagina
 
     - src/
     - ---assets
-    - ---------img
-    - ---axios
+    - ---BDusers
     - ---components
     - -------------home  
     - -----------------calls
