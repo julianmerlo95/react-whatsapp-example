@@ -1,5 +1,5 @@
-import React, { useState, Suspense, useContext } from 'react';
-import { withRouter, history } from 'react-router-dom';
+import React, { Suspense, useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Context } from '../../../context/Context';
 import Image from '../../UI/img/Img';
 import Navbar from '../../navbar/Navbar';

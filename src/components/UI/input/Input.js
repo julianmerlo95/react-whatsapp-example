@@ -6,7 +6,7 @@ import './Input.sass'
 const Input = () => {
 
   let context = useContext(Context);
-  const { showInput, changeMoodHandler } = context;
+  const { changeMoodHandler } = context;
 
   return (
     <div>

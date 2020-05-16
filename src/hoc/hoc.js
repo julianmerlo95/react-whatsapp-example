@@ -1,6 +1,11 @@
 import React from 'react';
 
-const hoc = (props) => {
+const Hoc = (props) => {
+  return (
+    <>
+      {props.children}
+    </>
+  )
+};
 
-}
-export default hoc;
+export default Hoc;

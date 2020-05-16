@@ -5,6 +5,7 @@ import Svg from '../svg/Svg';
 import './Img.sass';
 
 const Img = (props) => {
+
   const context = useContext(Context);
   const { newRenderImage } = context;
 

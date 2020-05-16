@@ -4,18 +4,15 @@ import { search, point, camera } from './data';
 import { Context } from '../../context/Context';
 import Svg from '../UI/svg/Svg';
 import Input from '../UI/input/Input';
-import Points from '../UI/points/Points';
 import './Navbar.sass';
 
 function Navbar() {
 
   const context = useContext(Context);
-  const { showInput, changeMoodHandler, showPoints, changePointsHandler } = context;
-
+  const { showInput, changeMoodHandler, changePointsHandler } = context;
 
   return (
     <div className="navbar">
-
       <div className="navbar__high">
         <h1 className="navbar__high__title">WhatsApp</h1>
         <ul className="navbar__high__list">
@@ -23,7 +20,6 @@ function Navbar() {
             <Svg icon={search} />
           </span>
           <span onClick={changePointsHandler}><Svg icon={point} /></span>
-          {/* {showPoints == false ? "" : <Points />} */}
         </ul>
       </div>
       {showInput == false ? <div id="navbar" className="navbar__show">
