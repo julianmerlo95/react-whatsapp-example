@@ -52,7 +52,7 @@ function Chats(props) {
                   </h3>
                   <span>
                     <Svg classIcon={`chats_container__message__iconAndMessage__icon`}
-                      icon={user.iconChats} color="gray" />
+                      icon={user.iconChats} color="#cecece" />
                   </span>
                 </div>
               </div>

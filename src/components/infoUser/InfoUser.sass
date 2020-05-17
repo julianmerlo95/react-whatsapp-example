@@ -1,0 +1,72 @@
+@import '../../globalStyle'
+
+.infouser
+
+  &__icon--back
+    position: absolute
+
+  &__img
+    width: 100%
+    height: 250px
+
+  &__name
+    position: absolute
+    margin-top: 200px
+    margin-left: 20px
+    color: white
+    font-size: 25px
+
+.infouser__list
+  list-style: none
+  padding: 0
+  padding: 7px
+  background: white
+  margin: 0
+
+  & li
+    margin: 0
+    border-top: 1px solid #cecece
+    font-weight: bold
+    font-size: 20px
+    padding: 10px
+
+  & div
+    border-top: 1px solid #cecece
+    font-size: 15px
+    padding: 10px
+
+  & div h3
+    font-size: 15px
+
+hr
+  height: 10px
+  background: #cecece
+  margin: 0
+  padding: 0
+
+.infouser__about
+  background: white
+  padding: 10px
+
+  & h3
+    color: $navbar-color
+
+  & h4
+    border-top: 1px solid #cecece
+    padding-top: 10px
+    font-family: $fontStyle
+
+.infouser__block
+  background: white
+
+  &--block , &--unlike
+    width: 100%
+    display: flex
+    justify-content: flex-start
+
+  &--block h3, &--unlike h3
+    margin-left: 20px
+    color: red
+
+  &--block span, &--unlike span
+    margin: 8px 0px 0px 10px

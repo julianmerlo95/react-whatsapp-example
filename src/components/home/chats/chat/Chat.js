@@ -18,7 +18,8 @@ const Chat = (props) => {
           <Svg icon="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z" />
         </h3>
         <img className="chat_container_date__img" src={arrayUser[index].img}></img>
-        <h3 className="chat_container_date__name">{arrayUser[index].name}</h3>
+        <h3 onClick={() => history.push(`/user/${index}`)}
+          className="chat_container_date__name">{arrayUser[index].name}</h3>
       </div>
       <div className="chat__container__message">
         <input placeholder="Type a message"></input>
