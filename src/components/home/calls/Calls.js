@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Context } from '../../../context/Context';
+import store from '../../../redux/index';
 import Navbar from '../../navbar/Navbar';
 import arrayUsers from '../../../BDusers/index';
 import Column from '../../UI/column/Column';
@@ -10,8 +10,19 @@ import './Calls.sass';
 
 function Calls(props) {
 
-  const context = useContext(Context);
-  const { showimage, changeImageHandler } = context;
+  const [showImage, setShowImage] = useState(false);
+
+  const changeImageHandler = (index, img, name) => {
+    setShowImage(!showImage);
+    store.dispatch({
+      type: 'SHOW_IMAGE',
+      image: {
+        index,
+        img,
+        name
+      }
+    })
+  }
 
   const changeComponentHandler = (index) => {
     props.history.push(`/calls/${index}`)
@@ -20,7 +31,7 @@ function Calls(props) {
   return (
     <div className="calls">
       <Navbar />
-      {showimage === true ? <Img /> : ""}
+      {showImage === true ? <Img /> : ""}
       {arrayUsers.map((user, index) => {
         return (
           <div key={index} className="calls__container__user">

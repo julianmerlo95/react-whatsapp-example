@@ -1,15 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { search, point, camera } from './data';
-import { Context } from '../../context/Context';
 import Svg from '../UI/svg/Svg';
 import Input from '../UI/input/Input';
 import './Navbar.sass';
 
 function Navbar() {
 
-  const context = useContext(Context);
-  const { showInput, changeMoodHandler, changePointsHandler } = context;
+  const [showInput, setShowInput] = useState(false);
+
+  const changeMoodHandler = () => {
+    setShowInput(!showInput)
+  }
 
   return (
     <div className="navbar">
@@ -19,7 +21,7 @@ function Navbar() {
           <span onClick={changeMoodHandler}>
             <Svg icon={search} />
           </span>
-          <span onClick={changePointsHandler}><Svg icon={point} /></span>
+          <span ><Svg icon={point} /></span>
         </ul>
       </div>
       {showInput == false ? <div id="navbar" className="navbar__show">

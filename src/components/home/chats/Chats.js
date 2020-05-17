@@ -1,6 +1,6 @@
-import React, { Suspense, useContext } from 'react';
+import React, { Suspense, useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Context } from '../../../context/Context';
+import store from '../../../redux/index';
 import Image from '../../UI/img/Img';
 import Navbar from '../../navbar/Navbar';
 import Loading from '../../loading/Loading';
@@ -11,9 +11,19 @@ import './Chats.sass';
 
 function Chats(props) {
 
-  const context = useContext(Context);
+  const [showimage, setShowImage] = useState(false)
 
-  const { showimage, changeImageHandler } = context;
+  const changeImageHandler = (index, img, name) => {
+    setShowImage(!showimage)
+    store.dispatch({
+      type: 'SHOW_IMAGE',
+      image: {
+        index,
+        img,
+        name
+      }
+    })
+  }
 
   const changeComponentHandler = (index) => {
     props.history.push(`/chats/${index}`);
@@ -23,7 +33,7 @@ function Chats(props) {
     <>
       <Suspense fallback={<Loading />}>
         <Navbar />
-        {showimage === true ? <Image /> : ""}
+        {showimage == true ? <Image /> : ''}
         {arrayUser.map((user, index) => {
           return (
             <div className="chats_container" key={index}>
