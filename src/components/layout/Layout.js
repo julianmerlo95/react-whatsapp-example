@@ -1,12 +1,13 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Loading from '../loading/Loading';
-const Camera = React.lazy(() => import('../home/camera/Camera'));
-const Chats = React.lazy(() => import('../home/chats/Chats'));
+import Camera from '../home/camera/Camera';
+import Chats from '../home/chats/Chats';
+import Status from '../home/status/Status';
+import Calls from '../home/calls/Calls';
+
 const Chat = React.lazy(() => import('../home/chats/chat/Chat'));
-const Status = React.lazy(() => import('../home/status/Status'));
 const Statu = React.lazy(() => import('../home/status/statu/Statu'));
-const Calls = React.lazy(() => import('../home/calls/Calls'));
 const Call = React.lazy(() => import('../home/calls/call/Call'));
 const Phone = React.lazy(() => import('../home/calls/phone/Phone'));
 const InfoUser = React.lazy(() => import('../infoUser/InfoUser'));
