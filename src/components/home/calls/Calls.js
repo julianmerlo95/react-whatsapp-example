@@ -41,10 +41,8 @@ function Calls(props) {
                 onClick={() => changeImageHandler(index, user.img, user.name)}
                 className="calls__img__user"
                 src={user.img}
-                loader={<img className="calls__img__user"
-                  src={user.img} />}
-                unloader={<img className="calls__img__user"
-                  src={user.img} />}
+                loader={<div className="loading__img"><h4>Loading...</h4></div>}
+                unloader={<div className="loading__img"><h4>Loading...</h4></div>}
               />
             </div>
             <div onClick={() => changeComponentHandler(index)}

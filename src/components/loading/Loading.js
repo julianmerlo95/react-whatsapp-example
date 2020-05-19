@@ -4,8 +4,8 @@ import './Loading.sass';
 
 const Loading = () => {
   return (
-    <div className="loading">
-      <div className="loading__text">
+    <div className="loading__app">
+      <div className="loading__app__text">
         <img src={logo}></img>
         <h2>From <span>Facebook</span></h2>
       </div>

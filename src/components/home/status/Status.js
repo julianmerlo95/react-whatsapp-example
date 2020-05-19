@@ -19,7 +19,12 @@ function Status(props) {
       <div className="status">
         <div className="status__container__personal">
           <div>
-            <img className="status__container__personal__img" src={img}></img>
+            <Img
+              className="status__container__user__img"
+              src={img}
+              loader={<div className="loading__img"><h4>Loading...</h4></div>}
+              unloader={<div className="loading__img"><h4>Loading...</h4></div>}
+            />
           </div>
           <div className="status__container__personal__data">
             <h3>My status</h3>
@@ -38,10 +43,8 @@ function Status(props) {
                 <Img
                   className="status__container__user__img"
                   src={user.imgStatu}
-                  loader={<img className="status__container__user__img"
-                    src={user.imgStatu} />}
-                  unloader={<img className="status__container__user__img"
-                    src={user.imgStatu} />}
+                  loader={<div className="loading__img"><h4>Loading...</h4></div>}
+                  unloader={<div className="loading__img"><h4>Loading...</h4></div>}
                 />
               </div>
               <div className="status__container__user__data">
