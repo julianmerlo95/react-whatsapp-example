@@ -12,7 +12,7 @@ const reducer = (state = showImage, action) => {
       }
 
     default:
-      console.log('The type not existing');
+      console.log('The type not exist');
       return state;
   }
 }

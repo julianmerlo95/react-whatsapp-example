@@ -10,7 +10,6 @@ const Img = (props) => {
     return store.getState().showImage;
   })
 
-
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div id="image" className="image">

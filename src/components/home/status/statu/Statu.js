@@ -11,7 +11,7 @@ const Statu = (props) => {
   useEffect(() => {
     setTimeout(() => {
       history.push('/status')
-    }, 3000);
+    }, 5000);
   }, []);
 
   let index = match.params.index;

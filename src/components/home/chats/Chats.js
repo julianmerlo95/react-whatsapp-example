@@ -14,7 +14,7 @@ function Chats(props) {
   const [showimage, setShowImage] = useState(false)
 
   const changeImageHandler = (index, img, name) => {
-    setShowImage(!showimage)
+    setShowImage(!showimage);
     store.dispatch({
       type: 'SHOW_IMAGE',
       image: {
