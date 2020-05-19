@@ -12,14 +12,23 @@ Estructura de la pagina
     - ---components
     - -------------home  
     - -----------------calls
+    - ----------------------phone
+    - ----------------------call
     - -----------------camera
     - -----------------chats
+    - ----------------------chat
     - -----------------status
-    - -------------layout
+    - ----------------------statu
+    - -------------infoUser
     - -------------loading
     - -------------navbar
     - -------------UI
+    - ---------------column
+    - ---------------img
+    - ---------------inputs
+    - ---------------svg
     - ---containers
+    - -------------layout
     - ---redux
     - ---hoc
 
@@ -28,7 +37,7 @@ Conceptos que se implementaron en el proyecto
 - props
 - state
 - eventos
-- context
+- redux
 - sass
 - metodologia en estilos css: bem
 - los componentes se crearon con react hook
