@@ -1,10 +1,8 @@
-
 const showImage = {}
 
 const reducer = (state = showImage, action) => {
 
   switch (action.type) {
-
     case 'SHOW_IMAGE':
       return {
         ...state,

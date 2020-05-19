@@ -31,7 +31,7 @@ function Navbar() {
           </h3>
           <ul className="navbar__down__list">
             <li>
-              <NavLink activeStyle={{ color: 'white' }} to="/"> Chats </NavLink>
+              <NavLink activeStyle={{ color: 'white' }} to="/chats"> Chats </NavLink>
             </li>
             <li>
               <NavLink activeStyle={{ color: 'white' }} to="/status"> Status </NavLink>
