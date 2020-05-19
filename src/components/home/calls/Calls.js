@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import Image from 'react-image';
 import store from '../../../redux/index';
 import Navbar from '../../navbar/Navbar';
 import arrayUsers from '../../../BDusers/index';
@@ -36,8 +37,15 @@ function Calls(props) {
         return (
           <div key={index} className="calls__container__user">
             <div className="calls__img">
-              <img onClick={() => changeImageHandler(index, user.img, user.name)}
-                className="calls__img__user" src={user.img}></img>
+              <Image
+                onClick={() => changeImageHandler(index, user.img, user.name)}
+                className="calls__img__user"
+                src={user.img}
+                loader={<img className="calls__img__user"
+                  src={user.img} />}
+                unloader={<img className="calls__img__user"
+                  src={user.img} />}
+              />
             </div>
             <div onClick={() => changeComponentHandler(index)}
               className="calls__date">

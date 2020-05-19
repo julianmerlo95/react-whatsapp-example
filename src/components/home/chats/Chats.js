@@ -1,5 +1,6 @@
 import React, { Suspense, useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import Img from 'react-image';
 import store from '../../../redux/index';
 import Image from '../../UI/img/Img';
 import Navbar from '../../navbar/Navbar';
@@ -38,8 +39,15 @@ function Chats(props) {
           return (
             <div id="prueba" className="chats_container" key={index}>
               <div className="chats_container_img">
-                <img onClick={() => changeImageHandler(index, user.img, user.name)}
-                  src={user.img}></img>
+                <Img
+                  onClick={() => changeImageHandler(index, user.img, user.name)}
+                  className="chats_container_img__primary"
+                  src={user.img}
+                  loader={<img className="chats_container_img__primary"
+                    src={user.img} />}
+                  unloader={<img className="chats_container_img__primary"
+                    src={user.img} />}
+                />
               </div>
               <div id={`div_${index}`} className="hide__chats_container_img">
                 <h5 id={`name_${index}`} className="hideImage"> {user.name}</h5>

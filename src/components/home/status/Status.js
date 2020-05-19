@@ -1,8 +1,4 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-import imagenes from '../../../assets/camera/fondo.jpeg';
-
 import Img from 'react-image';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../navbar/Navbar';
@@ -39,14 +35,13 @@ function Status(props) {
             <div onClick={() => changeComponentHandler(index)}
               key={index} className="status__container__user">
               <div>
-                {/* <LazyLoadImage
+                <Img
                   className="status__container__user__img"
                   src={user.imgStatu}
-                /> */}
-                <Img className="status__container__user__img"
-                  src={user.imgStatu}
-                  loader={<img src={imagenes} />}
-                  unloader={<img src={imagenes} />}
+                  loader={<img className="status__container__user__img"
+                    src={user.imgStatu} />}
+                  unloader={<img className="status__container__user__img"
+                    src={user.imgStatu} />}
                 />
               </div>
               <div className="status__container__user__data">
