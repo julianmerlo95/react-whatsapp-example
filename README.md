@@ -4,8 +4,6 @@
 
 #### Esta totalmente adaptada a celulares y escritorio
 
-## Esta app esta consumiendo una app Node para las llamadas con Axios.
-
 Estructura de la pagina 
 
     - src/
@@ -22,7 +20,7 @@ Estructura de la pagina
     - -------------navbar
     - -------------UI
     - ---containers
-    - ---contex
+    - ---redux
     - ---hoc
 
 Conceptos que se implementaron en el proyecto
