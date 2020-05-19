@@ -1,10 +1,10 @@
 import React from 'react';
-import Img from 'react-image';
-import { withRouter } from 'react-router-dom';
-import Navbar from '../../navbar/Navbar';
-import arrayUser from '../../../BDusers/index';
 import img from '../../../assets/status/julian.JPG'
+import { withRouter } from 'react-router-dom';
+import arrayUser from '../../../BDusers/index';
 import Column from '../../UI/column/Column';
+import Navbar from '../../navbar/Navbar';
+import Img from 'react-image';
 import './Status.sass';
 
 function Status(props) {

@@ -23,7 +23,7 @@ function Layout() {
             <Route exact path="/chats" component={Chats} />
             <Route path="/chats/:index" component={Chat} />
             <Route path="/user/:index" component={InfoUser} />
-            <Route path="/camera" component={Camera} />
+            <Route exact path="/camera" component={Camera} />
             <Route exact path="/status" component={Status} />
             <Route path="/status/:index" component={Statu} />
             <Route exact path="/calls" component={Calls} />

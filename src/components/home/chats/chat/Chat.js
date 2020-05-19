@@ -1,6 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom'
 import arrayUser from '../../../../BDusers/index';
+import { withRouter } from 'react-router-dom'
 import Svg from '../../../UI/svg/Svg';
 import './Chat.sass';
 

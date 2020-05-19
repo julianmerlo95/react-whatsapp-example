@@ -1,7 +1,7 @@
 import React from 'react';
+import img from '../../../assets/camera/fondo.jpeg';
 import Navbar from '../../navbar/Navbar';
 import Image from 'react-image';
-import img from '../../../assets/camera/fondo.jpeg';
 import './Camera.sass';
 
 function Camera() {

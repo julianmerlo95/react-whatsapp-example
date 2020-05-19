@@ -1,13 +1,13 @@
 import React, { Suspense, useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import Img from 'react-image';
-import store from '../../../redux/index';
-import Image from '../../UI/img/Img';
-import Navbar from '../../navbar/Navbar';
-import Loading from '../../loading/Loading';
 import arrayUser from '../../../BDusers/index';
+import Loading from '../../loading/Loading';
 import Column from '../../UI/column/Column';
+import store from '../../../redux/index';
+import Navbar from '../../navbar/Navbar';
+import Image from '../../UI/img/Img';
 import Svg from '../../UI/svg/Svg';
+import Img from 'react-image';
 import './Chats.sass';
 
 function Chats(props) {

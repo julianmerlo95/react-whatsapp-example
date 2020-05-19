@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import './InfoUser.sass';
 import arrayUser from '../../BDusers/index';
 import Svg from '../UI/svg/Svg';
+import './InfoUser.sass';
 
 const InfoUser = (props) => {
 

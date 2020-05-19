@@ -1,7 +1,7 @@
 import React from 'react';
+import arrayUser from '../../../../BDusers/index';
 import { withRouter } from 'react-router-dom';
 import Svg from '../../../UI/svg/Svg';
-import arrayUser from '../../../../BDusers/index';
 import './Call.sass';
 
 const Call = (props) => {
@@ -43,4 +43,3 @@ const Call = (props) => {
 }
 
 export default withRouter(Call);
-

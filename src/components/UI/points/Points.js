@@ -16,3 +16,4 @@ const Points = () => {
 }
 
 export default Points;
+// IN PROGRESS THIS COMPONENT

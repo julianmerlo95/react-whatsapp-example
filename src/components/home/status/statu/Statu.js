@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import React from 'react';
 import arrayUser from '../../../../BDusers/index';
+import { withRouter } from 'react-router-dom';
 import Svg from '../../../UI/svg/Svg';
 import './Statu.sass';
 
 const Statu = (props) => {
 
   const { history, match } = props;
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     history.push('/status')
-  //   }, 5000);
-  // }, []);
 
   let index = match.params.index;
 

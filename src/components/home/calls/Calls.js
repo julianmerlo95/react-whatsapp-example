@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
+import arrayUsers from '../../../BDusers/index';
 import { withRouter } from 'react-router-dom';
-import Image from 'react-image';
+import Column from '../../UI/column/Column';
 import store from '../../../redux/index';
 import Navbar from '../../navbar/Navbar';
-import arrayUsers from '../../../BDusers/index';
-import Column from '../../UI/column/Column';
 import Svg from '../../UI/svg/Svg';
 import Img from '../../UI/img/Img';
+import Image from 'react-image';
 import './Calls.sass';
 
 function Calls(props) {
