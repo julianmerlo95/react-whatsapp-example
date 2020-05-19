@@ -8,11 +8,11 @@ const Statu = (props) => {
 
   const { history, match } = props;
 
-  useEffect(() => {
-    setTimeout(() => {
-      history.push('/status')
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     history.push('/status')
+  //   }, 5000);
+  // }, []);
 
   let index = match.params.index;
 
