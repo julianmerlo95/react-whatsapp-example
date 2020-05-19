@@ -25,7 +25,7 @@ const InfoUser = (props) => {
         <li>Media visibility</li>
         <li>Starred messages</li>
         <div>
-          <h2>Encryption</h2>
+          <h2 className="infouser__title">Encryption</h2>
           <h3 style={{ fontFamily: 'Lato, sans-serif' }}>Messages tot his chat and calls are secured with end-to-end encryption.
           Tap to verify
           </h3>
@@ -35,7 +35,7 @@ const InfoUser = (props) => {
       <hr></hr>
       <div className="infouser__about">
         <h3>About and phone number</h3>
-        <h2>Keep walking</h2>
+        <h2 className="infouser__title">Keep walking</h2>
         <h4>+534567854243</h4>
       </div>
       <hr></hr>

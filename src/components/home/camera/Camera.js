@@ -11,8 +11,8 @@ function Camera() {
       <Image
         className="camera__img"
         src={img}
-        loader={<div className="loading__camera"><h2>Loading...</h2></div>}
-        unloader={<div className="loading__camera"><h2>Loading...</h2></div>}
+        loader={<div className="loading__container"><div className="loading__camera"></div></div>}
+        unloader={<div><div className="loading__camera"></div></div>}
       />
     </div>
   );

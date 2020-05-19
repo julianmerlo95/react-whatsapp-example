@@ -1,6 +1,9 @@
 @import '../../globalStyle'
 
 .infouser
+  width: 80%
+  margin: 0 auto
+  margin-top: 20px
 
   &__icon--back
     position: absolute
@@ -12,7 +15,7 @@
 
   &__name
     position: absolute
-    margin-top: 200px
+    margin-top: 110px
     margin-left: 20px
     color: white
     font-size: 25px
@@ -28,7 +31,7 @@
     margin: 0
     border-top: 1px solid #cecece
     font-weight: bold
-    font-size: 20px
+    font-size: 18px
     padding: 10px
 
   & div
@@ -38,6 +41,9 @@
 
   & div h3
     font-size: 15px
+
+.infouser__title
+  font-size: 20px
 
 hr
   height: 7px
@@ -71,3 +77,27 @@ hr
 
   &--block span, &--unlike span
     margin: 8px 0px 0px 10px
+
+@media screen and ( max-width:768px)
+  .infouser
+    width: 100%
+    margin-top: 0px
+
+    &__img
+      width: 100%
+      height: 250px
+      object-fit: cover
+
+    &__name
+      margin-top: 180px
+
+@media screen and ( max-width:425px)
+  .infouser
+
+    &__img
+      width: 100%
+      height: 150px
+      object-fit: cover
+
+    &__name
+      margin-top: 110px

@@ -43,8 +43,8 @@ function Chats(props) {
                   onClick={() => changeImageHandler(index, user.img, user.name)}
                   className="chats_container_img__primary"
                   src={user.img}
-                  loader={<div className="loading__img"><h4>Loading...</h4></div>}
-                  unloader={<div className="loading__img"><h4>Loading...</h4></div>}
+                  loader={<div class="loading__img"></div>}
+                  unloader={<div class="loading__img"></div>}
                 />
               </div>
               <div id={`div_${index}`} className="hide__chats_container_img">

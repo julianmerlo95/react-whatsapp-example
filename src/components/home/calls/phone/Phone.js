@@ -34,7 +34,6 @@ const Phone = (props) => {
       <div className="phone__info__down">
         <ul>
           <li>This call is private</li>
-          <li>WhatsApp</li>
           <li>From Facebook</li>
         </ul>
       </div>

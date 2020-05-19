@@ -11,7 +11,7 @@ const Img = (props) => {
   })
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading</div>}>
       <div id="image" className="image">
         <h3>{store.getState().showImage.name}</h3>
         <img className="image__img" src={store.getState().showImage.img}></img>
