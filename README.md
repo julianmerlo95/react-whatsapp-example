@@ -22,7 +22,7 @@ Estructura de la pagina
     - -------------navbar
     - -------------UI
     - ---containers
-    - ---contex
+    - ---redux
     - ---hoc
 
 Conceptos que se implementaron en el proyecto
