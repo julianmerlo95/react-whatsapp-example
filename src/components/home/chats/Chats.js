@@ -11,7 +11,7 @@ import './Chats.sass';
 
 function Chats(props) {
 
-  const [showimage, setShowImage] = useState(false)
+  const [showimage, setShowImage] = useState(false);
 
   const changeImageHandler = (index, img, name) => {
     setShowImage(!showimage);
@@ -36,7 +36,7 @@ function Chats(props) {
         {showimage == true ? <Image /> : ''}
         {arrayUser.map((user, index) => {
           return (
-            <div className="chats_container" key={index}>
+            <div id="prueba" className="chats_container" key={index}>
               <div className="chats_container_img">
                 <img onClick={() => changeImageHandler(index, user.img, user.name)}
                   src={user.img}></img>
