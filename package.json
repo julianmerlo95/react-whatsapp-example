@@ -14,7 +14,7 @@
     "react-image": "^2.4.0",
     "react-lazy-load-image-component": "^1.4.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.5"
   },
   "scripts": {
